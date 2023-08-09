@@ -1,0 +1,13 @@
+<div class="display-6 text-success">Http calls</div>
+<hr />
+<button class="btn btn-primary" (click)="getUsers()">Get Users</button>
+
+<div class="row">
+  <div class="col">
+    <div *ngFor="let post of posts">
+        <h5>{{post.title}}</h5>
+        <p>{{post.id | currency : 'INR'}} - {{post.body}}</p>
+        <hr>
+    </div>
+  </div>
+</div>

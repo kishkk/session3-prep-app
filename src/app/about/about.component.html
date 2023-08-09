@@ -1,0 +1,32 @@
+<div class="display-6 text-danger">Template Forms</div>
+<hr>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Register</div>
+          <div class="card-body">
+            <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" autocomplete="off" ngModel required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" autocomplete="off" ngModel required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" autocomplete="off" ngModel required>
+              </div>
+              <div class="mt-2">
+                <button type="submit" class="btn btn-primary mx-4" [disabled]="!registrationForm.valid">Register</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
